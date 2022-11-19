@@ -1,0 +1,39 @@
+/* Products */
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.product {
+    background-color: rebeccapurple;
+    color: white;
+    margin: 5px;
+    height: 300px;
+    display: grid;
+    place-content: center;
+}
+
+.product > .price {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.product:hover > .price {opacity: 1;}
+
+/* Cart */
+#cart-overlay {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    place-content: center;
+}
+#cart {
+    background-color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+}
